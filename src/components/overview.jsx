@@ -31,7 +31,7 @@ export default class Overview extends React.Component {
               );
             })}
           </div>
-          <div className="uk-position-bottom-center uk-position-small">
+          <div className="uk-position-bottom-center uk-position-small uk-visible@s">
             <ul className="uk-thumbnav">
               {this.props.slideshow.map((image, idx) => {
                 return (
