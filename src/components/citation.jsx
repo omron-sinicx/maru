@@ -27,7 +27,7 @@ const CopyButton = ({ text }) => {
         cursor: 'pointer',
       }}
     >
-      <FaCopy size={18} />
+      <FaCopy size={18} style={{ color: '#333' }} />
     </button>
   );
 };
@@ -41,6 +41,7 @@ export default class Citation extends React.Component {
     return (
       <div className="uk-section">
         <h2 className="uk-heading-line uk-text-center">Citation</h2>
+        <p>maru was first introduced and used in the following paper:</p>
         <pre
           className="uk-padding-small"
           style={{

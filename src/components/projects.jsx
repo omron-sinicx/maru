@@ -30,7 +30,13 @@ export default class Projects extends React.Component {
   render() {
     return this.props.projects ? (
       <div className="uk-section">
-        <h2 className="uk-heading-line uk-text-center">Relevant Projects</h2>
+        <h2 className="uk-heading-line uk-text-center">
+          Projects powered by maru
+        </h2>
+        <p>
+          maru is used across diverse fields, including not only HCI
+          applications but also Robotics and Machine Learning.
+        </p>
         {this.props.projects.map((project, idx) => {
           return (
             <ProjectCard

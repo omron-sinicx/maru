@@ -1,241 +1,112 @@
-theme: default # default || dark
+theme: dark
 organization: OMRON SINIC X
 twitter: '@omron_sinicx'
-title: 'Multi-Agent Behavior Retrieval: Retrieval-Augmented Policy Training for Cooperative Manipulation by Mobile Robots'
-conference: IROS2024
+title: 'maru: a miniature-sized wheeled robot for swarm robotics research'
+conference: CHI2024
 resources:
-  paper: https://arxiv.org/abs/1909.13111
-  code: https://github.com/omron-sinicx/multipolar
-  video: https://www.youtube.com/embed/W8nBFKDxsb0
-  blog: https://medium.com/sinicx/multipolar-multi-source-policy-aggregation-for-transfer-reinforcement-learning-between-diverse-bc42a152b0f5
-  huggingface: https://huggingface.co/
-description: explore a new challenge in transfer RL, where only a set of source policies collected under unknown diverse dynamics is available for learning a target task efficiently.
-image: https://omron-sinicx.github.io/multipolar/assets/teaser.png
-url: https://omron-sinicx.github.io/multipolar
-speakerdeck: b7a0614c24014dcbbb121fbb9ed234cd
+  paper: https://dl.acm.org/doi/10.1145/3613904.3642870
+  arxiv: https://arxiv.org/abs/2402.15830
+  code: https://github.com/omron-sinicx/swarm-body
+  video: #
+  blog: #
+description: maru (= miniature assemblage adaptive robot unit) is a custom-made, miniature-sized, two-wheeled robot designed specifically for tabletop swarm robotics research. This platform enables researchers and hobbyists to explore the dynamics of swarm robotics in a controlled, tabletop environment.
+image: https://omron-sinicx.github.io/swarm-body/assets/teaser.png
+url: https://omron-sinicx.github.io/swarm-body
+speakerdeck: #
 authors:
-  - name: So Kuroki
-    affiliation: [1, 2]
-    url: http://barekatain.me/
-    position: intern
-  - name: Mai Nishimura
+  - name: Shigeo Yoshida
     affiliation: [1]
-    position: Senior Researcher
-    url: https://denkiwakame.github.io
-  - name: Tadashi Kozuno
-    affiliation: [1]
-    position: Senior Researcher
-    url: https://sites.google.com/view/masashihamaya/home
-    #  - name: Mai Nishimura
-    #    affiliation: [1]
-    #    url: https://denkiwakame.github.io
-    #  - name: Asako Kanezaki
-    #    affiliation: [2]
-    #    url: https://kanezaki.github.io/
-contact_ids: ['github', 'omron', 2] #=> github issues, contact@sinicx.com, 2nd author
+    position: Principal Investigator
+    url: https://shigeodayo.me
+  - name: Takefumi Hiraki
+    affiliation: [2]
+    position: Senior Research Scientist
+    url: https://takefumihiraki.com/
+  - name: Reo Matsumura
+    affiliation: [3]
+    url: yhttps://krkrpro.com/contact
+    position: Engineer
+contact_ids: ['karakuri', 1] #=> github issues, contact@sinicx.com, 2nd author
 affiliations:
   - OMRON SINIC X Corporation
-  - Technical University of Munich
+  - Cluster Metaverse Lab
+  - Karakuri Products, Inc.
 meta:
-  - '* work done as an intern at OMRON SINIC X.'
+  # none
 bibtex: >
-  # arXiv version
-
-  @article{barekatain2019multipolar,
-    title={MULTIPOLAR: Multi-Source Policy Aggregation for Transfer Reinforcement Learning between Diverse Environmental Dynamics},
-    author={Barekatain, Mohammadamin and Yonetani, Ryo and Hamaya, Masashi},
-    journal={arXiv preprint arXiv:1909.13111},
-    year={2019}
-  }
-
-  # IJCAI version
-
-  @inproceedings{barekatain2020multipolar,
-    title={MULTIPOLAR: Multi-Source Policy Aggregation for Transfer Reinforcement Learning between Diverse Environmental Dynamics},
-    author={Barekatain, Mohammadamin and Yonetani, Ryo and Hamaya, Masashi},
-    booktitle={International Joint Conference on Artificial Intelligence (IJCAI)},
-    year={2020}
+  @inproceedings{ichihashi2024swarm,
+    author = {Ichihashi, Sosuke and Kuroki, So and Nishimura, Mai and Kasaura, Kazumi and Hiraki, Takefumi and Tanaka, Kazutoshi and Yoshida, Shigeo},
+    title = {Swarm Body: Embodied Swarm Robots},
+    year = {2024},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {[https://doi.org/10.1145/3613904.3642870](https://doi.org/10.1145/3613904.3642870)},
+    doi = {10.1145/3613904.3642870},
+    booktitle = {Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems},
+    numpages = {19},
+    location = {, Honolulu, HI, USA, },
+    series = {CHI '24}
   }
 header:
-  bg_curve:
-    sinic_curve.png
-    #  bg_image: https://github.com/omron-sinicx/swarm-body/raw/main/images/teaser.jpg
+  bg_curve: sinic_curve.png
+  bg_image: https://github.com/omron-sinicx/swarm-body/raw/main/images/teaser.jpg
 
 teaser: teaser.png
 overview: |
-  This is a versatile template designed to satisfy your research project page needs, all while harnessing the power of **UIKit** and **React**. Built on the foundations of simplicity and flexibility, this template allows you to focus on expressing your ideas without the hassle of directly handling CSS—thanks to customizable SASS variables.
-  With markdown as your canvas and $\KaTeX$ for precise equations, crafting clear and engaging project page becomes effortless. Whether you're unraveling complex theories or presenting your findings, this template aims to support your scholarly endeavors with grace and ease.
-  *Need to edit HTML directly?* Fear not! In addition to markdown, you can also directly write HTML with ease. Feel empowered to craft your content exactly as you envision it, whether through markdown's simplicity or the precision of HTML.
 
 body:
-  - title: Media examples
+  - title: maru
+  - text: |
+      **"maru" (= miniature assemblage adaptive robot unit)** is a custom-made, miniature-sized, two-wheeled robot designed specifically for tabletop swarm robotics research. This platform enables researchers and hobbyists to explore the dynamics of swarm robotics in a controlled, tabletop environment.
+
+      The [GitHub repository](https://github.com/omron-sinicx/swarm-body) serves as a comprehensive resource for assembling and operating maru, providing detailed documentation and files, including:
+        - `hardware/3Dmodel` 3D models of the robot and its cradle (a combined communication and charging module),
+        - `hardware/circuit/schematic` Circuit schematics to guide the electronic assembly,
+        - `hardware/circuit/gerber` Gerber files for PCB manufacturing,
+        - `software/firmware Firmware` for both the robot and the cradle, distributed in binary format (Note: There are currently no plans to release the source code),
+        - `software/control` APIs and sample codes to help you get started with programming the robot for various tasks and behaviors (C# and Python).
+
+      This project draws inspiration from [Zooids](https://github.com/ShapeLab/SwarmUI), an open-source swarm robot platform. Similar to Zooids, maru employs projection-based position tracking; however both maru's hardware and software are entirely new designs, another platform for swarm robotics research in HCI.
+  - title: Hardware
+    image: robot_exploded.png
     text: |
-      You can access media files in `src/media/` using `assets/` paths
+      The hardware design is shown above. The dimensions are 30 mm in diameter and 34 mm in height, weighing about 23 g. The robot parts include a microcontroller unit (STM32G071KBU62 from STMicroelectronics), motor drivers (DRV8837DSGR3 from Texas Instruments), RF module (RF2401F204 from NiceRF), motors with a 26:1 planetary gearbox (Pololu 23575), photodiode (PD15-22C/TR86 from Everlight Electronics), and a 40mAh Li-Po battery.
 
-      <img src="assets/method.png" alt="" />
+      Since the robot is lightweight, the robot may fall over while moving if the moving speed is too fast. Magnets can be attached to the bottom of the robot, and the robot can be run on steel or other materials to keep it from falling over.
 
-      See also [UIKit Video Components Documentation](https://getuikit.com/docs/video) and [Grid system](https://getuikit.com/docs/grid)
-      <div class="uk-child-width-1-2@m" uk-grid>
-        <div>
-          <video
-            src="assets/demo.mp4"
-            loop
-            muted
-            uk-video="autoplay:inview"
-            />
-        </div>
-        <div>
-          <video
-            src="assets/demo.mp4"
-            loop
-            muted
-            uk-video="autoplay:inview"
-            />
-        </div>
-      </div>
-  - title: Markdown examples
+      A detailed description of the hardware design and specifications is available [here](https://shigeodayo.notion.site/Hardware-Manual-maru-8442a3ade0ba457dba1eb5f8b898ae2d).
+  - title: Software
+    image: robot_communication.png
     text: |
-      Here's our demo text showcasing the power of markdown and KaTeX integration!
-      Markdown allows you to easily format text using simple syntax.
-      - **bold**
-      - *italic*
-      - `inline code`.
+      The communication between the robots and the host computer is shown above. The robots and the cradles (charging station + RF/IO dongle) are each equipped with an RF module and communicate through a 2.4GHz ISM band wireless communication. The user does not need to be aware of the communication control between the robot and the cradles, as it is performed on the firmware of both devices. The user can easily control the robot wirelessly by sending the specified commands.
 
-      You can also create headings of various levels:
-      # Heading Level 1
-      ## Heading Level 2
-      ### Heading Level 3
-      #### Heading Level 4
-      Markdown allows you to create tables like the following:
-      #### Motion Planning (MP) Dataset
-      markdown version
-      |Method|Opt|Exp|Hmean|
-      |--|--|--|--|
-      |BF| 65.8 (63.8, 68.0)| 44.1 (42.8, 45.5) | 44.8 (43.4, 46.3)|
-      |WA*| 68.4 (66.5, 70.4)| 35.8 (34.5, 37.1) | 40.4 (39.0, 41.8)|
-      |**Neural A*** | **87.7 (86.6, 88.9)**| 40.1 (38.9, 41.3) | 52.0 (50.7, 53.3)|
+      A detailed description of the software design and specifications is available [here](https://shigeodayo.notion.site/Software-Manual-maru-53adfd3b5a8c482b9a2acadc83991381).
+  - title: Projection-based Localization
+    text: |
+      A projection-based localization system used for the Zooids was used to track the robots. A high-speed projector (DLP LightCrafter 45007 from Texas Instruments) was used to project a sequence of gray-coded patterns onto the table; the two photodiodes on the robot received the projected coded-pattern light, and the microcontroller of the robot decoded its pattern into position information. Then, the robot calculated its orientation from the positions of two photodiodes and broadcasted its position and orientation information to the host computer.
 
-      Of course, you can also directly write tables in HTML if needed. For more details, refer to the [UIKit Table documentation](https://getuikit.com/docs/table).
-      <h4>Motion Planning (MP) Dataset</h4>
-      <p>HTML version</p>
-      <div class="uk-overflow-auto">
-        <table class="uk-table uk-table-small uk-text-small uk-table-divider">
-          <thead>
-            <tr>
-              <th>Method</th>
-              <th>Opt</th>
-              <th>Exp</th>
-              <th>Hmean</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                BF
-                <br />
-                WA*
-              </td>
-              <td>
-                65.8 (63.8, 68.0)
-                <br />
-                68.4 (66.5, 70.4)
-              </td>
-              <td>
-                44.1 (42.8, 45.5)
-                <br />
-                35.8 (34.5, 37.1)
-              </td>
-              <td>
-                44.8 (43.4, 46.3)
-                <br />
-                40.4 (39.0, 41.8)
-              </td>
-            </tr>
-            <tr>
-              <td>
-                SAIL
-                <br />
-                SAIL-SL
-                <br />
-                BB-A*
-              </td>
-              <td>
-                5.7 (4.6, 6.8)
-                <br />
-                3.1 (2.3, 3.8)
-                <br />
-                31.2 (28.8, 33.5)
-              </td>
-              <td>
-                58.0 (56.1, 60.0)
-                <br />
-                57.6 (55.7, 59.6)
-                <br />
-                52.0 (50.2, 53.9)
-              </td>
-              <td>
-                7.7 (6.4, 9.0)
-                <br />
-                4.4 (3.5, 5.3)
-                <br />
-                31.1 (29.2, 33.0)
-              </td>
-            </tr>
-            <tr class="uk-active">
-              <td>
-                Neural BF
-                <br />
-                <b>Neural A*</b>
-              </td>
-              <td>
-                75.5 (73.8, 77.1)
-                <br />
-                <b>87.7 (86.6, 88.9)</b>
-              </td>
-              <td>
-                45.9 (44.6, 47.2)
-                <br />
-                40.1 (38.9, 41.3)
-              </td>
-              <td>
-                52.0 (50.7, 53.4)
-                <br />
-                52.0 (50.7, 53.3)
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <h3>Selected Path Planning Results</h3>
-      <img
-        src="assets/result1.png"
-        class="uk-align-center uk-responsive-width"
-        alt=""
-      />
-      <h3>Path Planning Results on SSD Dataset</h3>
-      <img
-        src="assets/result2.png"
-        class="uk-align-center uk-responsive-width"
-        alt=""
-      />
-  - title: KaTeX examples
-    text: >
-      $\KaTeX$ enables you to write mathematical expressions beautifully within your text (e.g. $\alpha$, $\beta$, $\gamma$ ).
-      $$ax^2 + bx + c = 0$$
-      $$ \int \oint \sum \prod $$
-      $$ \begin{CD} A @>a>> B \\ @VbVV @AAcA \\ C @= D \end{CD} $$
-      [KaTeX supports a wide range of mathematical symbols and equations](https://katex.org/docs/support_table.html), ensuring your technical content is both clear and visually appealing.
-      With markdown for text formatting and KaTeX for mathematical expressions, our template empowers you to communicate complex ideas effectively. Whether you're writing a scientific paper or a technical blog post, harnessing these tools will elevate your content and engage your readers.
+      For instructions on the projector tracking system, see https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup
+  - title: License
+    text: |
+      The software materials of this project are under an [MIT license](https://github.com/omron-sinicx/swarm-body/blob/main/LICENSE). <br />
+      The hardware materials of this project are under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
 projects:
-  - title: 'maru: a miniature-sized wheeled robot for swarm robotics research'
+  - title: 'Swarm Body: Embodied Swarm Robots'
     journal: "CHI'24"
     img: 'https://github.com/omron-sinicx/swarm-body/raw/main/images/teaser.jpg'
     description: |
-      "maru" (= miniature assemblage adaptive robot unit) is a custom-made, miniature-sized, two-wheeled robot designed specifically for tabletop swarm robotics research.
-    url: https://github.com/omron-sinicx/swarm-body
+      Embodied swarm robots allow a human to dynamically shape and disassemble their bodies to physically and adaptively interact with the local and remote environments.
+    url: https://shigeodayo.me/ja/works/swarm_body/
+  - title: 'Multi-Agent Behavior Retrieval: Retrieval-Augmented Policy Training for Cooperative Push Manipulation by Mobile Robots'
+    journal: "IROS'24"
+    img: 'https://omron-sinicx.github.io/mabr/assets/method.png'
+    description: |
+      This project introduces the Multi-Agent Coordination Skill Database, allowing multiple mobile robots to efficiently use past memories to adapt to new tasks.
+    url: https://github.com/omron-sinicx/mabr
   - title: 'Language-Guided Pattern Formation for Swarm Robotics with Multi-Agent Reinforcement Learning'
     journal: "IROS'24"
-    img: 'https://github.com/omron-sinicx/swarm-body/raw/main/images/teaser.jpg'
+    img: 'https://omron-sinicx.github.io/language-guided-pattern-formation/assets/overview.jpg'
     description: |
-      "maru" (= miniature assemblage adaptive robot unit) is a custom-made, miniature-sized, two-wheeled robot designed specifically for tabletop swarm robotics research.
-    url: https://github.com/omron-sinicx/swarm-body
+      This project explores how to leverate the vast knowledge encoded in large language models to tackle pattern formation challenges for swarm robotics systems.
+    url: https://github.com/omron-sinicx/language-guided-pattern-formation

@@ -63,12 +63,12 @@ class Template extends React.Component {
           theme={data.theme}
           header={data.header}
         />
+        <Overview
+          overview={data.overview}
+          teaser={data.teaser}
+          description={data.description}
+        />
         <div className="uk-container uk-container-small">
-          <Overview
-            overview={data.overview}
-            teaser={data.teaser}
-            description={data.description}
-          />
           <Video video={data.resources.video} />
           <SpeakerDeck dataId={data.speakerdeck} />
           <Body body={data.body} />
