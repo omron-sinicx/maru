@@ -64,6 +64,7 @@ class Template extends React.Component {
           header={data.header}
         />
         <Overview
+          slideshow={data.slideshow}
           overview={data.overview}
           teaser={data.teaser}
           description={data.description}

@@ -54,6 +54,13 @@ header:
 teaser: teaser.png
 overview: |
 
+slideshow:
+  - teaser.png
+  - sb_robot.png
+  - exploded_real_naname.jpg
+  - teaser.jpg
+  - maru_cradle.jpg
+
 body:
   - title: maru
   - text: |
