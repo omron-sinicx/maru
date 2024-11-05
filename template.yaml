@@ -110,10 +110,10 @@ projects:
     img: 'https://omron-sinicx.github.io/mabr/assets/method.png'
     description: |
       This project introduces the Multi-Agent Coordination Skill Database, allowing multiple mobile robots to efficiently use past memories to adapt to new tasks.
-    url: https://github.com/omron-sinicx/mabr
+    url: https://omron-sinicx.github.io/mabr/
   - title: 'Language-Guided Pattern Formation for Swarm Robotics with Multi-Agent Reinforcement Learning'
     journal: "IROS'24"
     img: 'https://omron-sinicx.github.io/language-guided-pattern-formation/assets/overview.jpg'
     description: |
-      This project explores how to leverate the vast knowledge encoded in large language models to tackle pattern formation challenges for swarm robotics systems.
-    url: https://github.com/omron-sinicx/language-guided-pattern-formation
+      This project explores how to leverage the vast knowledge encoded in large language models to tackle pattern formation challenges for swarm robotics systems.
+    url: https://omron-sinicx.github.io/language-guided-pattern-formation/
