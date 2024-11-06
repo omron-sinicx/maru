@@ -5,10 +5,10 @@ title: 'maru: a miniature-sized wheeled robot for swarm robotics research'
 conference: CHI2024
 resources:
   paper: https://dl.acm.org/doi/10.1145/3613904.3642870
-  arxiv: https://arxiv.org/abs/2402.15830
+  arxiv:
   code: https://github.com/omron-sinicx/swarm-body
   video: #
-  blog: #
+  blog: # https://medium.com/sinicx/our-paper-which-explores-whether-people-can-perceive-as-if-swarm-robots-were-part-of-their-body-69bc10abfd64
 description: maru (= miniature assemblage adaptive robot unit) is a custom-made, miniature-sized, two-wheeled robot designed specifically for tabletop swarm robotics research. This platform enables researchers and hobbyists to explore the dynamics of swarm robotics in a controlled, tabletop environment.
 image: https://omron-sinicx.github.io/swarm-body/assets/teaser.png
 url: https://omron-sinicx.github.io/swarm-body
@@ -28,9 +28,12 @@ authors:
     position: Engineer
 contact_ids: ['karakuri', 1] #=> github issues, contact@sinicx.com, 2nd author
 affiliations:
-  - OMRON SINIC X Corporation
-  - Cluster Metaverse Lab
-  - Karakuri Products, Inc.
+  - name: OMRON SINIC X Corporation
+    url: https://www.omron.com/sinicx/
+  - name: Cluster Metaverse Lab
+    url: https://lab.cluster.mu/
+  - name: Karakuri Products, Inc.
+    url: https://krkrpro.com/
 meta:
   # none
 bibtex: >

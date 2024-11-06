@@ -31,6 +31,7 @@ $omron-color: #1c5eb8;
 $accent-color: #e55927;
 
 $global-link-color: $accent-color;
+$global-link-hover-color: $accent-color;
 $theme-color: #282c34;
 $theme-color-fg: #fff;
 $global-color: #000;
@@ -41,9 +42,6 @@ $text-secondary-color: $global-color;
 
 $button-text-color: $theme-color-fg;
 $button-text-hover-color: #fff;
-
-// TODO: link
-// $global-link-color: #DA7D02;
 
 $background-secondary-background: $theme-color;
 $button-primary-background: $theme-color;
