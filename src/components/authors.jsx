@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import CorporateLogo from '../components/logo.jsx';
 
 export default class Authors extends React.Component {
   constructor(props) {
@@ -31,6 +32,31 @@ export default class Authors extends React.Component {
             );
           })}
           <span className="uk-width-1-1">{this.props.meta}</span>
+          <a
+            className={`uk-width-1-${this.props.affiliations.length}`}
+            href="https://www.omron.com/sinicx/"
+            target="_blank"
+          >
+            <CorporateLogo
+              name="sinicx"
+              size="xl"
+              inverted={this.props.theme == 'dark' ? true : false}
+            />
+          </a>
+          <a
+            className={`uk-width-1-${this.props.affiliations.length}`}
+            href="https://lab.cluster.mu/"
+            target="_blank"
+          >
+            <CorporateLogo name="cluster" size="xl" inverted={false} />
+          </a>
+          <a
+            className={`uk-width-1-${this.props.affiliations.length}`}
+            href="https://krkrpro.com/"
+            target="_blank"
+          >
+            <CorporateLogo name="karakuri" size="xl" inverted={false} />
+          </a>
         </div>
       </div>
     );

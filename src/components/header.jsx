@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Authors from '../components/authors.jsx';
-import CorporateLogo from '../components/logo.jsx';
 import { FaGithub, FaYoutube, FaMedium } from 'react-icons/fa6';
 import { FaFilePdf } from 'react-icons/fa';
 import { SiArxiv } from 'react-icons/si';
@@ -115,22 +114,8 @@ export default class Header extends React.Component {
                 authors={this.props.authors}
                 affiliations={this.props.affiliations}
                 meta={this.props.meta}
+                theme={this.props.theme}
               />
-              <div className="uk-text-center uk-margin-top uk-flex uk-flex-center">
-                <a href="https://www.omron.com/sinicx" target="_blank">
-                  <CorporateLogo
-                    name="sinicx"
-                    size="xl"
-                    inverted={this.props.theme == 'dark' ? true : false}
-                  />
-                </a>
-                <a href="https://www.omron.com/sinicx" target="_blank">
-                  <CorporateLogo name="cluster" size="xl" inverted={false} />
-                </a>
-                <a href="https://www.omron.com/sinicx" target="_blank">
-                  <CorporateLogo name="karakuri" size="xl" inverted={false} />
-                </a>
-              </div>
               <div className="uk-flex uk-flex-center uk-margin-top">
                 {Object.keys(this.props.resources).map((key) => (
                   <ResourceBtn
