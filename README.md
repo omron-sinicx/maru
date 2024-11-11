@@ -48,7 +48,7 @@ A detailed description of the software design and specifications is available [h
 
 ## Projection-based Localization
 A projection-based localization system used for the Zooids was used to track the robots.
-A high-speed projector (DLP LightCrafter 45007 from Texas Instruments) was used to project a sequence of gray-coded patterns onto the table; the two photodiodes on the robot received the projected coded-pattern light, and the microcontroller of the robot decoded its pattern into position information.
+A high-speed projector (DLP LightCrafter 4500 from Texas Instruments) was used to project a sequence of gray-coded patterns onto the table; the two photodiodes on the robot received the projected coded-pattern light, and the microcontroller of the robot decoded its pattern into position information.
 Then, the robot calculated its orientation from the positions of two photodiodes and broadcasted its position and orientation information to the host computer.
 
 For instructions on the projector tracking system, see https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup
