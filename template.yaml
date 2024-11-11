@@ -30,10 +30,13 @@ contact_ids: ['karakuri', 1] #=> github issues, contact@sinicx.com, 2nd author
 affiliations:
   - name: OMRON SINIC X Corporation
     url: https://www.omron.com/sinicx/
+    logo: sinicx.svg
   - name: Cluster Metaverse Lab
     url: https://lab.cluster.mu/
+    logo: clusterlogo_1line_solid_color_dark.svg
   - name: Karakuri Products, Inc.
     url: https://krkrpro.com/
+    logo: karakuri_products_LOGO_white.svg
 meta:
   # none
 bibtex: >
@@ -104,7 +107,7 @@ body:
 projects:
   - title: 'Swarm Body: Embodied Swarm Robots'
     journal: "CHI'24"
-    img: 'https://github.com/omron-sinicx/swarm-body/raw/main/images/teaser.jpg'
+    img: featured_swarm.png
     description: |
       Embodied swarm robots allow a human to dynamically shape and disassemble their bodies to physically and adaptively interact with the local and remote environments.
     url: https://shigeodayo.me/ja/works/swarm_body/

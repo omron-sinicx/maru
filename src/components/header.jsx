@@ -116,12 +116,19 @@ export default class Header extends React.Component {
                 affiliations={this.props.affiliations}
                 meta={this.props.meta}
               />
-              <div className="uk-text-center uk-margin-top">
+              <div className="uk-text-center uk-margin-top uk-flex uk-flex-center">
                 <a href="https://www.omron.com/sinicx" target="_blank">
                   <CorporateLogo
-                    size="lg"
+                    name="sinicx"
+                    size="xl"
                     inverted={this.props.theme == 'dark' ? true : false}
                   />
+                </a>
+                <a href="https://www.omron.com/sinicx" target="_blank">
+                  <CorporateLogo name="cluster" size="xl" inverted={false} />
+                </a>
+                <a href="https://www.omron.com/sinicx" target="_blank">
+                  <CorporateLogo name="karakuri" size="xl" inverted={false} />
                 </a>
               </div>
               <div className="uk-flex uk-flex-center uk-margin-top">
