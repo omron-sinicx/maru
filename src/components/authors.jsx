@@ -33,7 +33,7 @@ export default class Authors extends React.Component {
           })}
           <span className="uk-width-1-1">{this.props.meta}</span>
           <a
-            className={`uk-width-1-${this.props.affiliations.length}`}
+            className={`uk-width-1-${this.props.affiliations.length}@m`}
             href="https://www.omron.com/sinicx/"
             target="_blank"
           >
@@ -44,14 +44,14 @@ export default class Authors extends React.Component {
             />
           </a>
           <a
-            className={`uk-width-1-${this.props.affiliations.length}`}
+            className={`uk-width-1-${this.props.affiliations.length}@m`}
             href="https://lab.cluster.mu/"
             target="_blank"
           >
             <CorporateLogo name="cluster" size="xl" inverted={false} />
           </a>
           <a
-            className={`uk-width-1-${this.props.affiliations.length}`}
+            className={`uk-width-1-${this.props.affiliations.length}@m`}
             href="https://krkrpro.com/"
             target="_blank"
           >
