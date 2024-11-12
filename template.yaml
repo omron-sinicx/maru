@@ -6,12 +6,12 @@ conference: CHI2024
 resources:
   paper: https://dl.acm.org/doi/10.1145/3613904.3642870
   arxiv:
-  code: https://github.com/omron-sinicx/swarm-body
+  code: https://github.com/omron-sinicx/maru
   video: #
   blog: # https://medium.com/sinicx/our-paper-which-explores-whether-people-can-perceive-as-if-swarm-robots-were-part-of-their-body-69bc10abfd64
 description: maru (= miniature assemblage adaptive robot unit) is a custom-made, miniature-sized, two-wheeled robot designed specifically for tabletop swarm robotics research. This platform enables researchers and hobbyists to explore the dynamics of swarm robotics in a controlled, tabletop environment.
-image: https://omron-sinicx.github.io/swarm-body/assets/teaser.png
-url: https://omron-sinicx.github.io/swarm-body
+image: https://omron-sinicx.github.io/maru/assets/teaser.png
+url: https://omron-sinicx.github.io/maru
 speakerdeck: #
 authors:
   - name: Shigeo Yoshida
@@ -55,7 +55,7 @@ bibtex: >
   }
 header:
   bg_curve: sinic_curve.png
-  bg_image: https://github.com/omron-sinicx/swarm-body/raw/main/images/teaser.jpg
+  bg_image: https://github.com/omron-sinicx/maru/raw/main/images/teaser.jpg
 
 teaser: teaser.png
 overview: |
@@ -72,7 +72,7 @@ body:
   - text: |
       **"maru" (= miniature assemblage adaptive robot unit)** is a custom-made, miniature-sized, two-wheeled robot designed specifically for tabletop swarm robotics research. This platform enables researchers and hobbyists to explore the dynamics of swarm robotics in a controlled, tabletop environment.
 
-      The [GitHub repository](https://github.com/omron-sinicx/swarm-body) serves as a comprehensive resource for assembling and operating maru, providing detailed documentation and files, including:
+      The [GitHub repository](https://github.com/omron-sinicx/maru) serves as a comprehensive resource for assembling and operating maru, providing detailed documentation and files, including:
         - `hardware/3Dmodel` 3D models of the robot and its cradle (a combined communication and charging module),
         - `hardware/circuit/schematic` Circuit schematics to guide the electronic assembly,
         - `hardware/circuit/gerber` Gerber files for PCB manufacturing,
@@ -101,7 +101,7 @@ body:
       For instructions on the projector tracking system, see [Zooids documentation](https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup).
   - title: License
     text: |
-      The software materials of this project are under an [MIT license](https://github.com/omron-sinicx/swarm-body/blob/main/LICENSE). <br />
+      The software materials of this project are under an [MIT license](https://github.com/omron-sinicx/maru/blob/main/LICENSE). <br />
       The hardware materials of this project are under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 projects:
