@@ -110,7 +110,7 @@ projects:
     img: featured_swarm.png
     description: |
       Embodied swarm robots allow a human to dynamically shape and disassemble their bodies to physically and adaptively interact with the local and remote environments.
-    url: https://shigeodayo.me/ja/works/swarm_body/
+    url: https://shigeodayo.me/works/swarm_body/
   - title: 'Multi-Agent Behavior Retrieval: Retrieval-Augmented Policy Training for Cooperative Push Manipulation by Mobile Robots'
     journal: "IROS'24"
     img: 'https://omron-sinicx.github.io/mabr/assets/method.png'
