@@ -6,7 +6,7 @@
     "dev": "webpack --mode development",
     "clean": "rm -rf build/",
     "build": "webpack --mode production",
-    "postbuild": "react-snap",
+    // "postbuild": "react-snap",
     "serve": "webpack serve --mode development",
     "format": "prettier -w src/ --check",
     "format:check": "prettier src/ --check",
