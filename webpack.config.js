@@ -20,6 +20,12 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
+    client: {
+      overlay: {
+        warnings: false,
+        errors: true,
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
