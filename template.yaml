@@ -105,6 +105,12 @@ body:
       The hardware materials of this project are under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 projects:
+  - title: 'FluidicSwarm: Embodiment of Swarm Robots Using Fluid Behavior Imitation'
+    journal: "SIGGRAPH'25 Emerging Technologies"
+    img: featured_fluidicswarm.jpg
+    description: |
+      This project introduces FluidicSwarm, a control system that enables users to intuitively manipulate robot swarms as fluid-like extensions of their own bodies.
+    url: https://mvml.slis.tsukuba.ac.jp/research/fluidicswarm/
   - title: 'Swarm Body: Embodied Swarm Robots'
     journal: "CHI'24"
     img: featured_swarm.png
