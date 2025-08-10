@@ -104,9 +104,9 @@ body:
       [PVLC-based Method]
       This method embeds a sequence of gray-coded patterns into video content for projection. By properly configuring the data sent to the projector, visual content can be projected while maintaining localization capabilities. For detailed information on this localization method, please refer to the paper [2].
 
-      1. Sho Kimura, Ryo Oguchi, Hideo Tanida, Yasuaki Kakehi, Keita Takahashi, and Takeshi Naemura: “PVLC Projector: Image Projection with Imperceptible Pixel-Level Metadata,” ACM SIGGRAPH2008 Posters, p. 135:1, 2008.8.
+      1. Sho Kimura, Ryo Oguchi, Hideo Tanida, Yasuaki Kakehi, Keita Takahashi, and Takeshi Naemura. 2008. PVLC projector: image projection with imperceptible pixel-level metadata. In ACM SIGGRAPH 2008 posters (SIGGRAPH '08). Association for Computing Machinery, New York, NY, USA, Article 135, 1. https://doi.org/10.1145/1400885.1401030
 
-      2. Takefumi Hiraki, Shogo Fukushima, Yoshihiro Kawahara, and Takeshi Naemura, “Phygital Field: An Integrated Field with Physical Robots and Digital Images using Projection-based Localization and Control Method,” SICE Journal of Control, Measurement, and System Integration, vol. 11, no. 4, pp. 302–311, 2018.7.
+      2. Takefumi Hiraki, Shogo Fukushima, Yoshihiro Kawahara, and Takeshi Naemura, “Phygital Field: An Integrated Field with Physical Robots and Digital Images using Projection-based Localization and Control Method,” SICE Journal of Control, Measurement, and System Integration, vol. 11, no. 4, pp. 302–311, 2018.7. https://doi.org/10.9746/jcmsi.11.302
 
   - title: License
     text: |
