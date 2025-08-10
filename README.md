@@ -159,8 +159,8 @@ bibtex: >
 
 ![image](https://github.com/user-attachments/assets/4f1ad0f3-46f8-4ab0-8a0c-062d2fba7b46)
 
-> [!NOTE] 
-> When using GitHub Actions to deploy a site on GitHub Pages, the source code is built internally during the workflow run. Only the build artifacts (e.g., HTML, CSS, JS) are deployed to the GitHub Pages environment, while the repository itself retains only the source code. 
+> [!NOTE]
+> When using GitHub Actions to deploy a site on GitHub Pages, the source code is built internally during the workflow run. Only the build artifacts (e.g., HTML, CSS, JS) are deployed to the GitHub Pages environment, while the repository itself retains only the source code.
 
 ### Push project page source to "project-page" branch
 - `$ git remote add github {your-github-repo-path}`
@@ -172,15 +172,15 @@ bibtex: >
 <details>
 <summary>Branch "project-page" is not allowed to deploy to github-pages due to environment protection rules</summary>
 Navigate to Settings > Environments > github-pages > 🗑️
-  
+
 ![image](https://github.com/user-attachments/assets/ddaa751d-cedc-4665-86a1-8afd88e04e52)
 
 </details>
 
 ## OGP (Open Graph Protocol)
-- OGP meta tags are [automatically generated](https://github.com/omron-sinicx/projectpage-template/blob/main/src/pages/index.jsx#L20-L55) from `template.yaml` and correctly rendered when deployed via **GitHub Actions (see above)**. 
+- OGP meta tags are [automatically generated](https://github.com/omron-sinicx/projectpage-template/blob/main/src/pages/index.jsx#L20-L55) from `template.yaml` and correctly rendered when deployed via **GitHub Actions (see above)**.
 
-> [!CAUTION] 
+> [!CAUTION]
 >  For local builds, react-snap must work properly to convert output into static HTML. We recommend building via GitHub Actions for consistent dependency management.
 
 - sample: https://x.com/omron_sinicx/status/1847150071143715312

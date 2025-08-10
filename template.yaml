@@ -83,7 +83,7 @@ body:
   - title: Hardware
     image: robot_exploded.png
     text: |
-      The hardware design is shown above. The dimensions are 30 mm in diameter and 34 mm in height, weighing about 23 g. The robot parts include a microcontroller unit (STM32G071KBU62 from STMicroelectronics), motor drivers (DRV8837DSGR3 from Texas Instruments), RF module (RF2401F204 from NiceRF), motors with a 26:1 planetary gearbox (Pololu 23575), photodiode (PD15-22C/TR86 from Everlight Electronics), and a 40mAh Li-Po battery.
+      The hardware design is shown above. The dimensions are 30 mm in diameter and 34 mm in height, weighing about 23 g. The robot parts include a microcontroller unit (STM32G071KBU62 from STMicroelectronics), motor drivers (DRV8837DSGR3 from Texas Instruments), RF module (RF2401F204 from NiceRF), motors with a 26:1 planetary gearbox (Pololu 23575), photodiode (PD15-22C/TR86 from Everlight Electronics), and a Li-Po battery (80mAh).
 
       Since the robot is lightweight, the robot may fall over while moving if the moving speed is too fast. Magnets can be attached to the bottom of the robot, and the robot can be run on steel or other materials to keep it from falling over.
 
@@ -96,9 +96,18 @@ body:
       A detailed description of the software design and specifications is available [here](https://shigeodayo.notion.site/Software-Manual-maru-53adfd3b5a8c482b9a2acadc83991381).
   - title: Projection-based Localization
     text: |
-      A projection-based localization system used for the Zooids was used to track the robots. A high-speed projector (DLP LightCrafter 4500 from Texas Instruments) was used to project a sequence of gray-coded patterns onto the table; the two photodiodes on the robot received the projected coded-pattern light, and the microcontroller of the robot decoded its pattern into position information. Then, the robot calculated its orientation from the positions of two photodiodes and broadcasted its position and orientation information to the host computer.
+      The maru system supports two types of projection-based localization methods: the **Zooids-based** method and **Pixel-level Visible Light Communication (PVLC)** [1] based method. Both methods employ a high-speed projector (DLP LightCrafter 4500 from Texas Instruments) to embed position-encoded patterns into projected images. The two photodiodes on each robot receive the projected coded-pattern light, and the robot’s microcontroller decodes these patterns into position information. Subsequently, the robot calculates its orientation from the positions of the two photodiodes and broadcasts its position and orientation information to the host computer. The details of each method are described below.
 
-      For instructions on the projector tracking system, see [Zooids documentation](https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup).
+      [Zooids-based Method]
+      This method projects a sequence of gray-coded patterns independently. A single white image is projected, allowing the projector to be used as an illumination source. For details on this localization method and setup instructions, please refer to [Zooids documentation](https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup).
+
+      [PVLC-based Method]
+      This method embeds a sequence of gray-coded patterns into video content for projection. By properly configuring the data sent to the projector, visual content can be projected while maintaining localization capabilities. For detailed information on this localization method, please refer to the paper [2].
+
+      1. Sho Kimura, Ryo Oguchi, Hideo Tanida, Yasuaki Kakehi, Keita Takahashi, and Takeshi Naemura: “PVLC Projector: Image Projection with Imperceptible Pixel-Level Metadata,” ACM SIGGRAPH2008 Posters, p. 135:1, 2008.8.
+
+      2. Takefumi Hiraki, Shogo Fukushima, Yoshihiro Kawahara, and Takeshi Naemura, “Phygital Field: An Integrated Field with Physical Robots and Digital Images using Projection-based Localization and Control Method,” SICE Journal of Control, Measurement, and System Integration, vol. 11, no. 4, pp. 302–311, 2018.7.
+
   - title: License
     text: |
       The software materials of this project are under an [MIT license](https://github.com/omron-sinicx/maru/blob/main/LICENSE). <br />
