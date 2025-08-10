@@ -47,11 +47,17 @@ A detailed description of the software design and specifications is available [h
 
 
 ## Projection-based Localization
-A projection-based localization system used for the Zooids was used to track the robots.
-A high-speed projector (DLP LightCrafter 4500 from Texas Instruments) was used to project a sequence of gray-coded patterns onto the table; the two photodiodes on the robot received the projected coded-pattern light, and the microcontroller of the robot decoded its pattern into position information.
-Then, the robot calculated its orientation from the positions of two photodiodes and broadcasted its position and orientation information to the host computer.
 
-For instructions on the projector tracking system, see https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup
+The maru system supports two types of projection-based localization methods: the **Zooids-based** method and **Pixel-level Visible Light Communication (PVLC)** [1] based method. Both methods employ a high-speed projector (DLP LightCrafter 4500 from Texas Instruments) to embed position-encoded patterns into projected images. The two photodiodes on each robot receive the projected coded-pattern light, and the robot’s microcontroller decodes these patterns into position information. Subsequently, the robot calculates its orientation from the positions of the two photodiodes and broadcasts its position and orientation information to the host computer. The details of each method are described below.
+
+[Zooids-based Method]
+This method projects a sequence of gray-coded patterns independently. A single white image is projected, allowing the projector to be used as an illumination source. For details on this localization method and setup instructions, please refer to https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup.
+
+[PVLC-based Method]
+This method embeds a sequence of gray-coded patterns into video content for projection. By properly configuring the data sent to the projector, visual content can be projected while maintaining localization capabilities. For detailed information on this localization method, please refer to the paper [2].
+
+1. Sho Kimura, Ryo Oguchi, Hideo Tanida, Yasuaki Kakehi, Keita Takahashi, and Takeshi Naemura: “PVLC Projector: Image Projection with Imperceptible Pixel-Level Metadata,” ACM SIGGRAPH2008 Posters, p. 135:1, 2008.8.
+2. Takefumi Hiraki, Shogo Fukushima, Yoshihiro Kawahara, and Takeshi Naemura, “Phygital Field: An Integrated Field with Physical Robots and Digital Images using Projection-based Localization and Control Method,” SICE Journal of Control, Measurement, and System Integration, vol. 11, no. 4, pp. 302–311, 2018.7.
 
 ![](./images/maru_cradle.jpg)
 
