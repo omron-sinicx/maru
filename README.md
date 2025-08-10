@@ -25,7 +25,7 @@ Similar to Zooids, maru employs projection-based position tracking; however both
 
 The hardware design is shown above.
 The dimensions are 30 mm in diameter and 34 mm in height, weighing about 23 g.
-The robot parts include a microcontroller unit (STM32G071KBU62 from STMicroelectronics), motor drivers (DRV8837DSGR3 from Texas Instruments), RF module (RF2401F204 from NiceRF), motors with a 26:1 planetary gearbox (Pololu 23575), photodiode (PD15-22C/TR86 from Everlight Electronics), and a 40mAh Li-Po battery.
+The robot parts include a microcontroller unit (STM32G071KBU62 from STMicroelectronics), motor drivers (DRV8837DSGR3 from Texas Instruments), RF module (RF2401F204 from NiceRF), motors with a 26:1 planetary gearbox (Pololu 23575), photodiode (PD15-22C/TR86 from Everlight Electronics), and a Li-Po battery (80mAh).
 
 Since the robot is lightweight, the robot may fall over while moving if the moving speed is too fast.
 Magnets can be attached to the bottom of the robot, and the robot can be run on steel or other materials to keep it from falling over.
@@ -48,10 +48,10 @@ A detailed description of the software design and specifications is available [h
 
 ## Projection-based Localization
 
-The maru system supports two types of projection-based localization methods: the **Zooids-based** method and **Pixel-level Visible Light Communication (PVLC)** [1] based method. Both methods employ a high-speed projector (DLP LightCrafter 4500 from Texas Instruments) to embed position-encoded patterns into projected images. The two photodiodes on each robot receive the projected coded-pattern light, and the robot’s microcontroller decodes these patterns into position information. Subsequently, the robot calculates its orientation from the positions of the two photodiodes and broadcasts its position and orientation information to the host computer. The details of each method are described below.
+The maru system supports two types of projection-based localization methods: the *Zooids-based* method and *Pixel-level Visible Light Communication (PVLC)* [1] based method. Both methods employ a high-speed projector (DLP LightCrafter 4500 from Texas Instruments) to embed position-encoded patterns into projected images. The two photodiodes on each robot receive the projected coded-pattern light, and the robot’s microcontroller decodes these patterns into position information. Subsequently, the robot calculates its orientation from the positions of the two photodiodes and broadcasts its position and orientation information to the host computer. The details of each method are described below.
 
 [Zooids-based Method]
-This method projects a sequence of gray-coded patterns independently. A single white image is projected, allowing the projector to be used as an illumination source. For details on this localization method and setup instructions, please refer to https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup.
+This method projects a sequence of gray-coded patterns independently. A single white image is projected, allowing the projector to be used as an illumination source. For details on this localization method and setup instructions, please refer to [Zooids documentation](https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup).
 
 [PVLC-based Method]
 This method embeds a sequence of gray-coded patterns into video content for projection. By properly configuring the data sent to the projector, visual content can be projected while maintaining localization capabilities. For detailed information on this localization method, please refer to the paper [2].
