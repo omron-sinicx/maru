@@ -5,3 +5,6 @@
 .python-version
 Pipfile
 Pipfile.lock
+
+build
+node_modules

@@ -1,0 +1,28 @@
+Item,Quantity,Designator,Manufacturer,Manufacturer Part Number
+1,1,CN1,Hirose,CX90M-16P
+2,1,CN2,Tensility International Corp,54-00255
+3,1,U1,FTDI,FT232RL-REEL
+4,1,U2,G-NiceRF,RF24
+5,1,U3,Johanson Technology Inc.,2450AT18D0100001E
+6,1,U4,"MaxLinear, Inc.",SPX3819M5-L-3-3/TR
+7,8,"U5, U6, U8, U9, U10, U11, U12, U13",Texas Instruments,SN74LVC2G126DCUR
+8,1,U7,STMicroelectronics,STM32G484RET6
+9,1,U14,Texas Instruments,LM66200DRLR
+10,4,"C1, C2, C15, C16",Murata Electronics,GRM1555C1H120GA01D
+11,18,"C3, C4, C5, C8, C9, C10, C11, C12, 
+C13, C14, C17, C18, C19, C20, C21, C22, 
+C23, C24",Murata Electronics,GRM155R71A104KA01D
+12,2,"C6, C7",Murata Electronics,GRM21BR70J106KA73K
+13,2,"R1, R2",Panasonic Electronic Components,ERJ-2GEJ563X
+14,11,"R3, R4, R5, R6, R10, R12, R13, R14,
+R15, R16, R17",Panasonic Electronic Components,ERJ-2GEJ202X
+15,1,R7,Panasonic Electronic Components,ERJ-3GEY0R00V
+16,1,R11,Panasonic Electronic Components,ERJ-2GEJ103X
+17,48,PS1~PS48,Harwin Inc.,P70-2200045
+18,1,X1,ECS Inc.,ECS-80-12-33Q-GN-TR
+19,1,SW1,Omron Electronics Inc-EMC Div,B3U-1000P
+20,1,LED1,Rohm Semiconductor,SML-D12M8WT86
+21,1,LED2,Rohm Semiconductor,SML-D12D1WT86
+22,9,"LED3, LED4, LED5, LED6,
+LED7, LED8, LED9, LED10, LED11",SunLED,XLUR13D
+23,8,"Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8",Nexperia USA Inc.,"PBRN123ET,215"

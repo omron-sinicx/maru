@@ -1,0 +1,31 @@
+Item,Quantity,Designator,Manufacturer,Manufacturer Part Number
+1,1,CN1,Hirose,DF17(2.0)-20DP-0.5V(57)
+2,1,U1,Microchip Technology,MCP4252-503E/UN
+3,1,U2,G-NiceRF,RF24
+4,1,U3,Johanson Technology Inc.,2450AT18D0100001E
+5,1,U4,STMicroelectronics,M95256-RDW6TP
+6,1,U5,Analog Devices Inc.,AD8602ARMZ-REEL
+7,1,U8,Analog Devices Inc.,ADP2503ACPZ-3.3-R7
+7,2,"D1, D2",Everlight Electronics Co Ltd,PD15-22C/TR8
+8,2,"R1, R4",Panasonic Electronic Components,ERJ-2GEJ155X
+9,2,"R2, R5",Panasonic Electronic Components,ERJ-2GEJ564X
+10,2,"R3, R6",Panasonic Electronic Components,ERJ-2GEJ104X
+11,1,R7,Panasonic Electronic Components,ERJ2GE0R00X
+12,2,"R8, R20",Panasonic Electronic Components,"ERJ-2GEJ202X
+ERJ-2GEJ102X"
+13,2,"R10, R15",Panasonic Electronic Components,ERJ2RKF1004X
+14,1,"R11,R13",Panasonic Electronic Components,ERJ-2GEJ241X
+15,1,R12,Panasonic Electronic Components,ERJ-2GEJ132X
+16,1,R14,Panasonic Electronic Components,ERJ-2GEJ100X
+17,2,"R18, R19",Panasonic Electronic Components,ERJ-2GEJ473X
+18,2,"R16, R17",Panasonic Electronic Components,ERJ-2GEJ103X
+19,2,Q1. Q2,onsemi,MBT3904
+20,1,Q7,Diodes Incorporated,DMG2305UX-13
+21,1,C1,Murata Electronics,GRM21BR70J106KA73K
+22,3,"C8, C9, C10",Murata Electronics,GRM155R60J106ME05D
+23,2,"C4, C6",Murata Electronics,GRM155R71A104KA01D
+24,1,C11,Murata Electronics,GRM155R60J105KE19D
+25,3,L1,Murata Electronics,LQM2HPN1R5MG0L
+26,1,LED1,Rohm Semiconductor,SMLVN6RGB1W1
+27,1,SW1,E-Switch,TL3365AF180QG
+28,3,"Q3, Q5, Q6",Rohm Semiconductor,UMH10NTN

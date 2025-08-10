@@ -1,3 +1,4 @@
+# python writeMotor.py <serial port> <robot id> <flag: 0 (calibrated, default) or 1 (raw)>
 import keyboard
 import sys
 from maru import osx001Driver
@@ -8,6 +9,7 @@ from serial.tools import list_ports
 def main():
     args = sys.argv
     targetId = 14
+    rawFlag = 0  # 0: calibrated, 1: raw
 
     # Exit if no serial port and id specified
     if len(args) < 3:
@@ -23,6 +25,9 @@ def main():
     # Initialization
     driver = osx001Driver(args[1])
     targetId = int(args[2])
+
+    if len(args) > 3:
+        rawFlag = int(args[3])
 
     rightSpeed = 0
     leftSpeed = 0
@@ -51,8 +56,9 @@ def main():
             rightSpeed = rightSpeed - defaultSpeed
             leftSpeed = leftSpeed - defaultSpeed
 
-        driver.writeMotorSpeed(targetId, rightSpeed, leftSpeed)
+        driver.writeMotorSpeed(targetId, rightSpeed, leftSpeed, rawFlag)
         driver.checkStatusPacket()
+        time.sleep(0.01)
 
 if __name__ == '__main__':
     main()
