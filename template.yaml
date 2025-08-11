@@ -108,6 +108,98 @@ body:
 
       2. Takefumi Hiraki, Shogo Fukushima, Yoshihiro Kawahara, and Takeshi Naemura, “Phygital Field: An Integrated Field with Physical Robots and Digital Images using Projection-based Localization and Control Method,” SICE Journal of Control, Measurement, and System Integration, vol. 11, no. 4, pp. 302–311, 2018.7. https://doi.org/10.9746/jcmsi.11.302
 
+  - title: maru vs. Other Platforms
+    text: |
+      We compared *maru* with similar small mobile robot platforms to highlight differences in localization, communication, hardware specifications, and availability.
+      <style>
+        .table-container {
+          overflow-x: auto;
+        }
+        table.compare {
+          border-collapse: collapse;
+          width: 100%;
+          min-width: 1000px;
+          font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+          font-size: 14px;
+        }
+        table.compare th, table.compare td {
+          padding: 10px 12px;
+          vertical-align: top;
+        }
+        /* ヘッダー行の背景色と文字色 */
+        table.compare thead th {
+          background-color: #f5f5f5;
+          font-weight: 600;
+          color: #333;
+          border-bottom: 2px solid #ccc;
+        }
+        /* データ行のストライプ */
+        table.compare tbody tr:nth-child(even) {
+          background-color: #fafafa;
+        }
+        /* maru 行の強調 */
+        .highlight {
+          background-color: #fff8dc !important;
+        }
+      </style>
+
+      <div class="table-container">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position Localization</th>
+              <th>Communication</th>
+              <th>Dimensions</th>
+              <th>Weight</th>
+              <th>Speed</th>
+              <th>Sensors</th>
+              <th>Battery Capacity</th>
+              <th>Available for Purchase</th>
+              <th>Manufacturing Method Open</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td><a href="https://github.com/omron-sinicx/swarm-body" target="_blank">maru</a></td>
+              <td>Projection-based</td>
+              <td>RF (compliant with TELEC or FCC certified)</td>
+              <td>30 x 34 mm (Φ x H)</td>
+              <td>23 g</td>
+              <td>500 mm/s</td>
+              <td>6-axis IMU sensor (3-axis accelerometer, 3-axis gyroscope)</td>
+              <td>80 mAh</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/ShapeLab/SwarmUI" target="_blank">Zooids</a></td>
+              <td>Projection-based</td>
+              <td>RF</td>
+              <td>26 x 21 mm (Φ x H)</td>
+              <td>12 g</td>
+              <td>500 mm/s</td>
+              <td>Touch</td>
+              <td>100 mAh</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/toio" target="_blank">toio</a></td>
+              <td>Pattern recognition</td>
+              <td>BLE</td>
+              <td>32 x 32 x 26 mm (D x W x H)</td>
+              <td>25 g</td>
+              <td>Linear: 350 mm/s<br>Rotation: 1500 deg/s</td>
+              <td>Magnetic sensor, 3-axis accelerometer, 3-axis gyroscope</td>
+              <td>260 mAh</td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
   - title: License
     text: |
       The software materials of this project are under an [MIT license](https://github.com/omron-sinicx/maru/blob/main/LICENSE). <br />
