@@ -102,7 +102,7 @@ body:
       This method projects a sequence of gray-coded patterns independently. A single white image is projected, allowing the projector to be used as an illumination source. For details on this localization method and setup instructions, please refer to [Zooids documentation](https://github.com/ShapeLab/SwarmUI/tree/master/Hardware/Projector%20Tracking%20Setup).
 
       [PVLC-based Method]
-      This method embeds a sequence of gray-coded patterns into video content for projection. By properly configuring the data sent to the projector, visual content can be projected while maintaining localization capabilities. For detailed information on this localization method, please refer to the paper [2].
+      This method embeds a sequence of gray-coded patterns into video content for projection. By properly configuring the data sent to the projector, **visual content can be projected** while maintaining localization capabilities. For detailed information on this localization method, please refer to the paper [2].
 
       1. Sho Kimura, Ryo Oguchi, Hideo Tanida, Yasuaki Kakehi, Keita Takahashi, and Takeshi Naemura. 2008. PVLC projector: image projection with imperceptible pixel-level metadata. In ACM SIGGRAPH 2008 posters (SIGGRAPH '08). Association for Computing Machinery, New York, NY, USA, Article 135, 1. https://doi.org/10.1145/1400885.1401030
 
@@ -162,7 +162,7 @@ body:
           <tbody>
             <tr class="highlight">
               <td><a href="https://github.com/omron-sinicx/swarm-body" target="_blank">maru</a></td>
-              <td>Projection-based</td>
+              <td>Projection (Zooids-based method or PVLC-based method)</td>
               <td>RF (compliant with TELEC or FCC certified)</td>
               <td>30 x 34 mm (Φ x H)</td>
               <td>23 g</td>
@@ -174,7 +174,7 @@ body:
             </tr>
             <tr>
               <td><a href="https://github.com/ShapeLab/SwarmUI" target="_blank">Zooids</a></td>
-              <td>Projection-based</td>
+              <td>Projection (Zooids-based method only)</td>
               <td>RF</td>
               <td>26 x 21 mm (Φ x H)</td>
               <td>12 g</td>
