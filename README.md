@@ -25,7 +25,7 @@ Similar to Zooids, maru employs projection-based position tracking; however both
 
 The hardware design is shown above.
 The dimensions are 30 mm in diameter and 34 mm in height, weighing about 23 g.
-The robot parts include a microcontroller unit (STM32G071KBU62 from STMicroelectronics), motor drivers (DRV8837DSGR3 from Texas Instruments), RF module (RF2401F204 from NiceRF), motors with a 26:1 planetary gearbox (Pololu 23575), photodiode (PD15-22C/TR86 from Everlight Electronics), and a Li-Po battery (80mAh).
+The robot parts include a microcontroller unit (STM32G0B1KEU6 from STMicroelectronics), motor drivers (DRV8837DSGR3 from Texas Instruments), an RF module (RF2401F204 from NiceRF), a 9-axis IMU (ICM-20948 from TDK InvenSense), motors with a 26:1 planetary gearbox (23575 from Pololu), photodiode (PD15-22C/TR86 from Everlight Electronics), and a 3.7V 80mAh Li-Po battery (501220).
 
 Since the robot is lightweight, the robot may fall over while moving if the moving speed is too fast.
 Magnets can be attached to the bottom of the robot, and the robot can be run on steel or other materials to keep it from falling over.
