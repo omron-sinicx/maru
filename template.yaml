@@ -167,7 +167,7 @@ body:
               <td>30 x 34 mm (Φ x H)</td>
               <td>23 g</td>
               <td>500 mm/s</td>
-              <td>6-axis IMU sensor (3-axis accelerometer, 3-axis gyroscope)</td>
+              <td>9-axis IMU (3-axis acceleration, 3-axis angular velocity, 3-axis magnetism)</td>
               <td>80 mAh</td>
               <td>Yes</td>
               <td>Yes</td>
