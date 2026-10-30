@@ -206,6 +206,12 @@ body:
       The hardware materials of this project are under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 projects:
+  - title: 'Symmetry-Breaking in Multi-Agent Navigation: Winding Number-Aware MPC with a Learned Topological Strategy'
+    journal: "IROS'26"
+    img: featured-WNumMPC.png
+    description: |
+      This project introduces WNumMPC, which learns cooperative symmetry-breaking strategies via winding numbers, enabling robots to avoid deadlocks in multi-robot navigation without explicit communication.
+    url: https://github.com/omron-sinicx/WNumMPC
   - title: 'FluidicSwarm: Embodiment of Swarm Robots Using Fluid Behavior Imitation'
     journal: "SIGGRAPH'25 Emerging Technologies"
     img: featured_fluidicswarm.jpg
