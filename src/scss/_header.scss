@@ -1,0 +1,30 @@
+// Responsive header curve. The curve background and side margin apply only on
+// wider viewports (>= 960px); below that they're dropped. This decision lives
+// in CSS (a media query), NOT in a JS `isMobile` state, so the SSG-prerendered
+// markup and the hydrated client render identically and the layout never
+// shifts after mount.
+//
+// The curve image URL itself is set as an inline `background-image` on the
+// element in header.jsx (from template.yaml's `header.bg_curve`), NOT via a
+// custom property consumed here. A relative `url()` in a custom property is
+// resolved against the stylesheet that reads it — in the production build that
+// stylesheet is /assets/*.css, so `url(sinic_curve.png)` would resolve to the
+// nonexistent /assets/sinic_curve.png and the curve would vanish. An inline
+// `background-image` resolves against the document instead, which is correct
+// for both root and subpath (GitHub Pages) deploys.
+.header-curve {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  // Hide the inline background-image and its side margin below 960px. The
+  // inline declaration wins over a normal rule, so the override needs
+  // !important; the media query stays the single source of truth for whether
+  // the curve shows, keeping SSG and client markup identical.
+  @media (max-width: 959px) {
+    background-image: none !important;
+  }
+  @media (min-width: 960px) {
+    margin: 20px 10px 20px 0px;
+  }
+}

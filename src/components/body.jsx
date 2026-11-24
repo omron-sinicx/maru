@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { marked } from 'marked';
 import markedKatex from 'marked-katex-extension';
 
@@ -31,7 +30,7 @@ class Content extends React.Component {
     if (this.props.image)
       return (
         <img
-          src={require(`../media/${this.props.image}`)}
+          src={`${this.props.image}`}
           className="uk-align-center uk-responsive-width"
           alt=""
         />

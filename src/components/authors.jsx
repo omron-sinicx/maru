@@ -1,6 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
-import CorporateLogo from '../components/logo.jsx';
+import CorporateLogo from '@/components/logo.jsx';
 
 export default class Authors extends React.Component {
   constructor(props) {
@@ -8,10 +7,10 @@ export default class Authors extends React.Component {
   }
 
   render() {
-    const columnMaxLen =
-      this.props.authors.length > 4 ? 3 : this.props.authors.length;
-    const authorClass = `uk-width-1-${columnMaxLen} uk-width-1-${this.props.authors.length}@m`;
-    const affliationClass = `uk-width-1-${this.props.affiliations.length} uk-margin-small-top uk-text-bold uk-text-muted`;
+    if (!this.props.affiliations) {
+      return null;
+    }
+    const affiliationClass = `uk-width-1-${this.props.affiliations.length} uk-margin-small-top uk-text-bold uk-text-muted`;
     return (
       <div>
         <div
@@ -20,7 +19,7 @@ export default class Authors extends React.Component {
         >
           {this.props.affiliations.map((affiliation, idx) => {
             return (
-              <span className={affliationClass} key={'affiliation-' + idx}>
+              <span className={affiliationClass} key={'affiliation-' + idx}>
                 <a
                   className="uk-link-heading"
                   href={affiliation.url}
@@ -31,7 +30,12 @@ export default class Authors extends React.Component {
               </span>
             );
           })}
-          <span className="uk-width-1-1">{this.props.meta}</span>
+          {/* one note per line: equal contribution, internship, joint last authors, ... */}
+          {[].concat(this.props.meta ?? []).map((note, idx) => (
+            <span className="uk-width-1-1" key={'meta-' + idx}>
+              {note}
+            </span>
+          ))}
           <a
             className={`uk-width-1-${this.props.affiliations.length}@m`}
             href="https://www.omron.com/sinicx/"

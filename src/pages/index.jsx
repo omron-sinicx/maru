@@ -1,58 +1,52 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Helmet } from 'react-helmet';
+import { ViteReactSSG } from 'vite-react-ssg/single-page';
+import { Head } from 'vite-react-ssg';
 
-import Header from '../components/header.jsx';
-import Overview from '../components/overview.jsx';
-import Video from '../components/video.jsx';
-import Body from '../components/body.jsx';
-import Contact from '../components/contact.jsx';
-import Footer from '../components/footer.jsx';
-import Citation from '../components/citation.jsx';
-import SpeakerDeck from '../components/speakerdeck.jsx';
-import Projects from '../components/projects.jsx';
+import Header from '@/components/header.jsx';
+import Overview from '@/components/overview.jsx';
+import Video from '@/components/video.jsx';
+import Body from '@/components/body.jsx';
+import Contact from '@/components/contact.jsx';
+import Footer from '@/components/footer.jsx';
+import Citation from '@/components/citation.jsx';
+import SpeakerDeck from '@/components/speakerdeck.jsx';
+import Projects from '@/components/projects.jsx';
 import data from '../../template.yaml';
 
+import '@/js/styles.js';
+
 class Template extends React.Component {
+  componentDidMount() {
+    // UIkit touches `document`, so it must only run on the client (never
+    // during the static build/SSG pass). Dynamic-import it after mount.
+    (async () => {
+      const { default: UIkit } = await import('uikit');
+      const { default: Icons } = await import('uikit/dist/js/uikit-icons');
+      UIkit.use(Icons);
+    })();
+  }
+
   render() {
     return (
       <div>
-        <Helmet
-          title={data.title}
-          meta={[
-            {
-              name: 'viewport',
-              content: 'width=device-width,initial-scale=1',
-            },
-            {
-              property: 'og:site_name',
-              content: data.organization,
-            },
-            { property: 'og:type', content: 'article' },
-            { property: 'og:title', content: data.title },
-            {
-              property: 'og:description',
-              content: data.description,
-            },
-            { property: 'og:image', content: data.image },
-            { property: 'og:image:alt', content: data.description },
-            { property: 'og:image:width', content: '1200' },
-            { property: 'og:image:height', content: '600' },
-            { property: 'og:url', content: data.url },
-            {
-              name: 'twitter:card',
-              content: 'summary_large_image',
-            },
-            { name: 'twitter:title', content: data.title },
-            { name: 'twitter:image:src', content: data.image },
-            {
-              name: 'twitter:description',
-              content: data.description,
-            },
-            { name: 'twitter:url', content: data.url },
-            { name: 'twitter:site', content: data.twitter },
-          ]}
-        />
+        <Head>
+          <title>{data.title}</title>
+          <meta property="og:site_name" content={data.organization} />
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content={data.title} />
+          <meta property="og:description" content={data.description} />
+          <meta property="og:image" content={data.image} />
+          <meta property="og:image:alt" content={data.description} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="600" />
+          <meta property="og:url" content={data.url} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={data.title} />
+          <meta name="twitter:image:src" content={data.image} />
+          <meta name="twitter:description" content={data.description} />
+          <meta name="twitter:url" content={data.url} />
+          <meta name="twitter:site" content={data.twitter} />
+        </Head>
         <Header
           title={data.title}
           conference={data.conference}
@@ -78,7 +72,7 @@ class Template extends React.Component {
             contact_ids={data.contact_ids}
             resources={data.resources}
           />
-          <Citation bibtex={data.bibtex} />
+          {data.bibtex && <Citation bibtex={data.bibtex} />}
           <Projects projects={data.projects} />
         </div>
         <Footer />
@@ -87,4 +81,4 @@ class Template extends React.Component {
   }
 }
 
-render(<Template />, document.getElementById('root'));
+export const createRoot = ViteReactSSG(<Template />);

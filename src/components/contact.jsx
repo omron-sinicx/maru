@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { FaGithub } from 'react-icons/fa6';
 import { MdAlternateEmail, MdContactMail } from 'react-icons/md';
 
@@ -8,6 +7,9 @@ class ContactCard extends React.Component {
     super(props);
   }
   render() {
+    if (!this.props.author) {
+      return null;
+    }
     return (
       <div className="uk-width-1-2@s uk-flex">
         <div className="uk-width-auto uk-margin-right">
@@ -137,6 +139,9 @@ export default class Contact extends React.Component {
   }
 
   render() {
+    if (!this.props.contact_ids || !this.props.authors) {
+      return null;
+    }
     return (
       <div className="uk-section">
         <h2 className="uk-heading-line uk-text-center">Contact</h2>
@@ -167,7 +172,7 @@ export default class Contact extends React.Component {
                 <GithubContactCard
                   repo={this.props.resources.code}
                   issues={this.props.resources.code + '/issues'}
-                  key={'conatct-github'}
+                  key={'contact-github'}
                 />
               );
             } else {

@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - project-page
-
 permissions:
   contents: read
   pages: write
@@ -11,27 +10,23 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.10.0
         with:
-          node-version: 20
-      - name: install
-        run: |
-          npm install
-      - name: build
-        run: |
-          npm run build
-        continue-on-error: true
-      - name: upload
+          pixi-version: v0.73.0
+          cache: true
+      - name: Build
+        run: pixi run build
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
   deploy:
     needs: build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

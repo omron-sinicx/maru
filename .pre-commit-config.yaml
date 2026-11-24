@@ -1,0 +1,32 @@
+# Git hooks are managed by prek (https://github.com/j178/prek), installed via pixi.
+# Install once per clone:  pixi run hooks
+# Run against everything:  pixi run hooks:all
+exclude: |
+  (?x)^(
+    \.claude/|
+    build/|
+    node_modules/|
+    package-lock\.json|
+    pixi\.lock
+  )
+
+repos:
+  - repo: local
+    hooks:
+      - id: prettier-src
+        name: prettier (src)
+        entry: npx --no-install prettier --write
+        language: system
+        files: ^src/.*\.(js|jsx)$
+
+      - id: prettier
+        name: prettier
+        entry: npx --no-install prettier --write
+        language: system
+        files: \.(json|md|ya?ml|scss|sass)$
+
+      - id: typos
+        name: typos
+        entry: typos --force-exclude
+        language: system
+        files: \.(js|jsx|ya?ml|md)$

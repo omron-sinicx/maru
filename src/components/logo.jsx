@@ -1,7 +1,9 @@
 import React from 'react';
-import sinicxLogo from '../media/sinicx.svg';
-import karakuriLogo from '../media/karakuri_products_LOGO_white.svg';
-import clusterLogo from '../media/clusterlogo_1line_solid_color_dark.svg';
+import sinicxLogo from '@/logo/sinicx.svg';
+// Served from `public/` as plain relative URLs so the prerendered HTML resolves
+// them correctly under a subpath deploy (e.g. /maru/).
+const karakuriLogo = 'karakuri_products_LOGO_white.svg';
+const clusterLogo = 'clusterlogo_1line_solid_color_dark.svg';
 
 export default class CorporateLogo extends React.Component {
   constructor(props) {

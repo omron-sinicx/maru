@@ -1,0 +1,7 @@
+[files]
+# Agent/tooling scratch space — not project source.
+extend-exclude = [".claude/"]
+
+[default.extend-words]
+
+SINIC = "SINIC"

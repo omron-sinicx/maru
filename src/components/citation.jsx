@@ -1,10 +1,10 @@
 import React from 'react';
-import { render } from 'react-dom';
-import UIkit from 'uikit';
 import { FaCopy } from 'react-icons/fa';
 
 const CopyButton = ({ text }) => {
-  const copyToClipboard = () => {
+  const copyToClipboard = async () => {
+    // UIkit touches `document`; load it lazily on the client only.
+    const { default: UIkit } = await import('uikit');
     const tt = document.querySelector('.tooltip');
     navigator.clipboard.writeText(text).then(
       () => {

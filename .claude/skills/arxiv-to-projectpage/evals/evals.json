@@ -1,0 +1,85 @@
+{
+  "skill_name": "arxiv-to-projectpage",
+  "evals": [
+    {
+      "id": 0,
+      "name": "pi0-clean",
+      "prompt": "I'm putting together the project page for our latest paper. Can you fill in template.yaml from https://arxiv.org/abs/2410.24164 ? Grab a teaser and the method figure into public/ too, and give me a short TL;DR.",
+      "expected_output": "template.yaml filled with the pi0 paper's title, all authors, abstract in overview, a 1-2 sentence TL;DR in description, resources.paper set to the abs url, a bibtex entry, teaser + method images downloaded to public/, and the paper's table converted to uk-table HTML in a body section. Repo-specific fields (theme, organization, header, projects) preserved.",
+      "files": [],
+      "assertions": [
+        "template.yaml parses as valid YAML",
+        "title field contains the paper's real title",
+        "resources.paper is set to the arXiv abs URL for this paper",
+        "description is a short TL;DR: non-empty, <= ~60 words, and shorter than the abstract (not a copy of it)",
+        "overview field is non-empty and reflects the paper's abstract",
+        "bibtex field contains the correct arXiv id",
+        "authors list is populated with the paper's authors (roughly the right count, first author correct)",
+        "the teaser field names an image file that actually exists in the saved outputs",
+        "at least one body section contains a converted uk-table HTML table (class 'uk-table')",
+        "repo-specific fields (theme, organization, twitter) are preserved unchanged from the original template"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "graphrag-svg",
+      "prompt": "make a project page for this: arxiv.org/abs/2404.16130v2",
+      "expected_output": "template.yaml filled from the GraphRAG paper. Because Figure 1 is an inline SVG, the teaser should be saved as teaser.svg (or a raster fallback) and the teaser field updated to match the real filename. Title, authors, abstract, TL;DR, bibtex, paper link all filled; a table converted; repo-specific fields preserved.",
+      "files": [],
+      "assertions": [
+        "template.yaml parses as valid YAML",
+        "title field contains the paper's real title",
+        "resources.paper is set to the arXiv abs URL for this paper",
+        "description is a short TL;DR: non-empty, <= ~60 words, and shorter than the abstract (not a copy of it)",
+        "overview field is non-empty and reflects the paper's abstract",
+        "bibtex field contains the correct arXiv id",
+        "authors list is populated with the paper's authors (roughly the right count, first author correct)",
+        "the teaser field names an image file that actually exists in the saved outputs",
+        "at least one body section contains a converted uk-table HTML table (class 'uk-table')",
+        "repo-specific fields (theme, organization, twitter) are preserved unchanged from the original template",
+        "because Figure 1 is an inline SVG, the teaser is saved as .svg (or a raster fallback) and the teaser field matches the actual saved filename (not a stale 'teaser.png')"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "sd3-fallback",
+      "prompt": "Here's our new paper https://arxiv.org/abs/2403.03206v1 - populate the template with the title, authors, abstract, a TL;DR, the teaser image, and convert the main results table to the uikit format.",
+      "files": [],
+      "assertions": [
+        "template.yaml parses as valid YAML",
+        "title field contains the paper's real title",
+        "resources.paper is set to the arXiv abs URL for this paper",
+        "description is a short TL;DR: non-empty, <= ~60 words, and shorter than the abstract (not a copy of it)",
+        "overview field is non-empty and reflects the paper's abstract",
+        "bibtex field contains the correct arXiv id",
+        "authors list is populated with the paper's authors (roughly the right count, first author correct)",
+        "the teaser field names an image file that actually exists in the saved outputs",
+        "at least one body section contains a converted uk-table HTML table (class 'uk-table')",
+        "repo-specific fields (theme, organization, twitter) are preserved unchanged from the original template",
+        "a teaser image exists in outputs even though Figure 1 has no inlined image (a fallback figure with an image was used)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "pdf-local-draft",
+      "prompt": "our IROS submission isn't on arxiv yet, the draft is at draft.pdf in the repo root. can you fill in template.yaml from it — teaser + method figures into public/, a TL;DR, and the results tables as proper html tables?",
+      "expected_output": "template.yaml filled from the local PDF: title/authors/affiliations/abstract read from the draft's front matter, teaser and method figures cropped from the pages by caption into public/, the paper's tables converted to uk-table HTML in a Results body section, and every field the PDF can't supply (paper URL, conference, bibtex venue) left empty with a TODO(human) marker instead of the previous example paper's values.",
+      "files": [
+        "draft.pdf"
+      ],
+      "assertions": [
+        "template.yaml parses as valid YAML",
+        "title field contains the paper's real title as printed on page 1",
+        "description is a short TL;DR: non-empty, <= ~60 words, and shorter than the abstract (not a copy of it)",
+        "overview field is non-empty and reflects the paper's abstract, with no words welded together by a dropped hyphen (e.g. 'phasespecific')",
+        "authors list is populated with all six authors in paper order, first author correct",
+        "authors carry the affiliation indices from their superscripts, and the affiliations list names the institutions from the page-1 footnotes",
+        "the teaser field names an image file that actually exists in the saved outputs, and the teaser is a cropped figure (not a whole rendered page)",
+        "at least one body section contains a uk-table HTML table converted from a PDF table, with the right number of columns and correct numbers",
+        "repo-specific fields (theme, organization, twitter, projects) are preserved unchanged from the original template",
+        "no field still holds the previous example paper's data (no 'multipolar' / MULTIPOLAR links or bibtex left anywhere)",
+        "fields the PDF cannot supply (resources.paper, conference, bibtex venue) are empty or marked TODO(human) rather than guessed or left stale"
+      ]
+    }
+  ]
+}

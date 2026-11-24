@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
-import UIkit from 'uikit';
 
 export default class Slider extends React.Component {
-  componentDidMount() {
+  async componentDidMount() {
+    // UIkit touches `document`; load it lazily on the client only.
+    const { default: UIkit } = await import('uikit');
     this.UIkitComponent = UIkit.slider(this.gridElement, {
       center: true, // Center items mode
       autoplay: false, // Defines whether or not the slider items should switch automatically

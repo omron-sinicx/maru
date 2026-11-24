@@ -1,6 +1,9 @@
-name: eslint
+name: lint
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -8,20 +11,15 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.10.0
         with:
-          node-version: '20.11.0'
-      - uses: actions/cache@v4
-        id: npm_cache_id
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - name: install
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
-      - name: eslint
-        run: npm run lint
-      - name: prettier
-        run: npm run format:check
-
+          pixi-version: v0.73.0
+          cache: true
+      - name: ESLint
+        run: pixi run lint
+      - name: Prettier
+        run: pixi run format
+      - name: Typos
+        run: pixi run typos

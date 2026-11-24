@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      /* Gentle fade-in of the prerendered content on first paint. Pure CSS:
+         the SSG markup is always present in the HTML (crawlers and no-JS
+         clients still see it) — this only animates its opacity, so there is
+         no FOUC and no dependency on JS to reveal the page. */
+      #root {
+        animation: fadeIn 0.9s;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #root {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/pages/index.jsx"></script>
+  </body>
+</html>

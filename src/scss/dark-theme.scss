@@ -60,5 +60,8 @@ $navbar-background: $theme-color;
 
 // import uikit
 @import 'uikit/src/scss/uikit.scss';
-@import '~normalize.css/normalize.css';
+@import 'normalize.css/normalize.css';
 // @import "uikit/src/scss/uikit-theme.scss";
+
+// project layout
+@import 'header';

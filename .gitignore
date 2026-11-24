@@ -1,5 +1,12 @@
 node_modules/*
 build/*
+.vite-react-ssg-temp/
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+# local Claude Code settings and skill eval artifacts (not part of the skill)
+.claude/settings.local.json
+.claude/skills/*-workspace/
 .DS_Store
 
 software/

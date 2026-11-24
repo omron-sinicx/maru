@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
 import Slider from '../components/slider.jsx';
-import { render } from 'react-dom';
 
 export default class Player extends React.Component {
   constructor(props) {

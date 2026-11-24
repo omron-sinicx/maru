@@ -43,6 +43,9 @@ $button-primary-background: $theme-color;
 $global-primary-background: $accent-color;
 $text-primary-color: $theme-color-fg;
 
+// table highlight <tr class="uk-active">
+$table-row-active-background: #ece4ef;
+
 // sinicx logo
 $navbar-nav-item-height: 20px;
 $navbar-background: $theme-color;
@@ -53,5 +56,8 @@ $navbar-background: $theme-color;
 
 // import uikit
 @import 'uikit/src/scss/uikit.scss';
-@import '~normalize.css/normalize.css';
+@import 'normalize.css/normalize.css';
 // @import "uikit/src/scss/uikit-theme.scss";
+
+// project layout
+@import 'header';

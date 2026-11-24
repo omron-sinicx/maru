@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 
 import { marked } from 'marked';
 import markedKatex from 'marked-katex-extension';
@@ -20,9 +19,9 @@ export default class Overview extends React.Component {
           <div className="uk-slideshow-items">
             {this.props.slideshow.map((image, idx) => {
               return (
-                <div>
+                <div key={'slide-' + idx}>
                   <img
-                    src={require('../media/' + image)}
+                    src={image}
                     className="uk-align-center"
                     alt=""
                     data-uk-cover
@@ -35,14 +34,9 @@ export default class Overview extends React.Component {
             <ul className="uk-thumbnav">
               {this.props.slideshow.map((image, idx) => {
                 return (
-                  <li data-uk-slideshow-item={idx}>
+                  <li data-uk-slideshow-item={idx} key={'thumb-' + idx}>
                     <a href="#">
-                      <img
-                        src={require('../media/' + image)}
-                        width="100"
-                        height="67"
-                        alt=""
-                      />
+                      <img src={image} width="100" height="67" alt="" />
                     </a>
                   </li>
                 );

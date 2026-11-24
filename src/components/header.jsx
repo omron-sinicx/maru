@@ -1,7 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
 import Authors from '../components/authors.jsx';
-import { FaGithub, FaYoutube, FaMedium } from 'react-icons/fa6';
+import { FaGithub, FaYoutube, FaMedium, FaRegFilePdf } from 'react-icons/fa6';
 import { FaFilePdf } from 'react-icons/fa';
 import { SiArxiv } from 'react-icons/si';
 import { Icon } from '@iconify/react';
@@ -10,18 +9,25 @@ const HuggingFace = ({ size }) => (
   <Icon icon="logos:hugging-face-icon" style={{ fontSize: size }} />
 );
 
+const GoogleColab = ({ size }) => (
+  <Icon icon="simple-icons:googlecolab" style={{ fontSize: size }} />
+);
+
 class ResourceBtn extends React.Component {
   constructor(props) {
     super(props);
+    // Default for the static build (no `window`); corrected in componentDidMount.
     this.state = {
-      isMobile: window.innerWidth < 600,
+      isMobile: false,
     };
     this.icons = {
       paper: FaFilePdf,
       arxiv: SiArxiv,
+      poster: FaRegFilePdf,
       code: FaGithub,
       video: FaYoutube,
       blog: FaMedium,
+      demo: GoogleColab,
       huggingface: HuggingFace,
     };
     this.handleResize = this.handleResize.bind(this);
@@ -59,24 +65,6 @@ class ResourceBtn extends React.Component {
 }
 
 export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMobile: window.innerWidth < 1000,
-    };
-    this.handleResize = this.handleResize.bind(this);
-  }
-  componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
-    this.handleResize();
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
-  handleResize() {
-    this.setState({ isMobile: window.innerWidth < 960 });
-  }
-
   render() {
     const titleClass = `uk-${
       this.props.title.length > 15 ? 'h2' : 'h1'
@@ -90,22 +78,24 @@ export default class Header extends React.Component {
           backgroundColor: '#030706',
         }
       : null;
-    const backgroundStyle = this.state.isMobile
-      ? null
-      : {
-          backgroundImage: `url(assets/${this.props.header.bg_curve})`,
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'right',
-          margin: '20px 10px 20px 0px',
-        };
+    // Set the curve as an inline `background-image` so its relative URL
+    // resolves against the document (correct for root and subpath deploys).
+    // Routing it through a CSS custom property instead would resolve the URL
+    // against the extracted /assets/*.css stylesheet in the production build,
+    // pointing at a nonexistent /assets/sinic_curve.png. Whether the curve (and
+    // its side margin) actually render is still decided by a media query in
+    // `_header.scss`, not by JS state — so the SSG markup and the hydrated
+    // client match and the layout never shifts after mount.
+    const curveStyle = this.props.header?.bg_curve
+      ? { backgroundImage: `url(${this.props.header.bg_curve})` }
+      : null;
     return (
       <>
         <div
           className="uk-cover-container uk-background-secondary"
           style={baseStyle}
         >
-          <div style={backgroundStyle}>
+          <div className="header-curve" style={curveStyle}>
             <div className="uk-container uk-container-small uk-section">
               <div className="uk-text-center uk-text-bold">
                 <p className={titleClass}>{this.props.title}</p>
