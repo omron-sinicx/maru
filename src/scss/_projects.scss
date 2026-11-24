@@ -59,12 +59,11 @@ $project-gold-deep: #c9971c;
     gap: 8px;
   }
 
-  // venue pill on the left, award badge pinned to the card's top-right
+  // venue pill followed by the award badge, side by side
   .project-card-meta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     gap: 8px;
   }
 
@@ -119,10 +118,11 @@ $project-gold-deep: #c9971c;
 
   .project-card-award {
     position: relative;
-    margin-left: auto;
+    // same typography and size as the venue pill
     font-family: 'Poppins';
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     color: #2b2000;
     background: linear-gradient(
       135deg,
@@ -131,7 +131,7 @@ $project-gold-deep: #c9971c;
       $project-gold-deep 100%
     );
     border-radius: 999px;
-    padding: 4px 12px;
+    padding: 2px 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
     overflow: hidden;
 

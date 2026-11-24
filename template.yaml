@@ -207,7 +207,7 @@ body:
 
 projects:
   - title: 'Fluidic Body: Swarm Robots as a Fluid Extension of the Hand'
-    journal: "ISS'26"
+    journal: "ACM ISS'26"
     award: Best Paper Award
     img: featured_fluidicbody.jpg
     description: |
