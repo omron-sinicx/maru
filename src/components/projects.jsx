@@ -10,10 +10,12 @@ const ProjectCard = ({ title, img, description, journal, url, award }) => (
     >
       <div className="project-card-media">
         <img src={img} alt="" loading="lazy" />
-        {award && <span className="project-card-award">🏆 {award}</span>}
       </div>
       <div className="project-card-body">
-        <span className="project-card-venue">{journal}</span>
+        <div className="project-card-meta">
+          <span className="project-card-venue">{journal}</span>
+          {award && <span className="project-card-award">🏆 {award}</span>}
+        </div>
         <h3 className="project-card-title">{title}</h3>
         <p className="project-card-desc">{description}</p>
       </div>

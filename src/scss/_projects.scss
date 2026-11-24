@@ -59,8 +59,16 @@ $project-gold-deep: #c9971c;
     gap: 8px;
   }
 
+  // venue pill on the left, award badge pinned to the card's top-right
+  .project-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
   .project-card-venue {
-    align-self: flex-start;
     font-family: 'Poppins';
     font-size: 0.75rem;
     font-weight: 600;
@@ -110,10 +118,8 @@ $project-gold-deep: #c9971c;
   }
 
   .project-card-award {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    z-index: 1;
+    position: relative;
+    margin-left: auto;
     font-family: 'Poppins';
     font-size: 0.8rem;
     font-weight: 700;
