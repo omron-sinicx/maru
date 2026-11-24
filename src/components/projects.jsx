@@ -1,6 +1,14 @@
 import React from 'react';
 
-const ProjectCard = ({ title, img, description, journal, url, award }) => (
+const ProjectCard = ({
+  title,
+  img,
+  description,
+  journal,
+  url,
+  award,
+  awardIcon = '🏆',
+}) => (
   <div data-uk-scrollspy="cls: uk-animation-fade; delay: 200; repeat: true">
     <a
       href={url}
@@ -14,7 +22,11 @@ const ProjectCard = ({ title, img, description, journal, url, award }) => (
       <div className="project-card-body">
         <div className="project-card-meta">
           <span className="project-card-venue">{journal}</span>
-          {award && <span className="project-card-award">🏆 {award}</span>}
+          {award && (
+            <span className="project-card-award">
+              {awardIcon} {award}
+            </span>
+          )}
         </div>
         <h3 className="project-card-title">{title}</h3>
         <p className="project-card-desc">{description}</p>
@@ -48,6 +60,7 @@ export default class Projects extends React.Component {
               journal={project.journal}
               url={project.url}
               award={project.award}
+              awardIcon={project.award_icon}
             />
           );
         })}

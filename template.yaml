@@ -227,6 +227,8 @@ projects:
     url: https://mvml.slis.tsukuba.ac.jp/research/fluidicswarm/
   - title: 'Swarm Body: Embodied Swarm Robots'
     journal: "CHI'24"
+    award: Interactivity Popular Choice Honorable Mention
+    award_icon: 🏅
     img: featured_swarm.png
     description: |
       Embodied swarm robots allow a human to dynamically shape and disassemble their bodies to physically and adaptively interact with the local and remote environments.
