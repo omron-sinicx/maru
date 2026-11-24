@@ -206,6 +206,13 @@ body:
       The hardware materials of this project are under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 projects:
+  - title: 'Fluidic Body: Swarm Robots as a Fluid Extension of the Hand'
+    journal: "ISS'26"
+    award: Best Paper Award
+    img: featured_fluidicbody.jpg
+    description: |
+      A virtual fluid links the hand and a swarm of maru robots: open the hand to soften the swarm so it flows around obstacles, close it to harden the swarm and push objects.
+    url: https://tamago117.github.io/FluidicBody/
   - title: 'Symmetry-Breaking in Multi-Agent Navigation: Winding Number-Aware MPC with a Learned Topological Strategy'
     journal: "IROS'26"
     img: featured-WNumMPC.png

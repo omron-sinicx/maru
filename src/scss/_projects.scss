@@ -1,0 +1,169 @@
+// "Projects powered by maru" cards: dark cards matching the header, with a
+// gold treatment for award-winning projects (template.yaml `award:`).
+$project-card-bg: #1e2127;
+$project-card-fg: #e8e8e8;
+$project-card-muted: #a0a4ab;
+$project-gold: #f5c542;
+$project-gold-deep: #c9971c;
+
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 24px;
+  background: $project-card-bg;
+  color: $project-card-fg;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    color: $project-card-fg;
+    text-decoration: none;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+
+    .project-card-media img {
+      transform: scale(1.06);
+    }
+    .project-card-title {
+      color: $accent-color;
+    }
+  }
+
+  .project-card-media {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 100%;
+    min-height: 180px;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .project-card-body {
+    flex: 1 1 0;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-card-venue {
+    align-self: flex-start;
+    font-family: 'Poppins';
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background: $accent-color;
+    border-radius: 999px;
+    padding: 2px 10px;
+  }
+
+  .project-card-title {
+    margin: 0;
+    color: #fff;
+    font-family: $global-font-family;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .project-card-desc {
+    margin: 0;
+    color: $project-card-muted;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 640px) {
+    flex-wrap: nowrap;
+    .project-card-media {
+      flex: 0 0 34%;
+      min-height: 200px;
+    }
+  }
+
+  // ---- award-winning project -------------------------------------------
+  &.is-award {
+    box-shadow:
+      0 0 0 2px $project-gold,
+      0 6px 22px rgba(245, 197, 66, 0.25);
+
+    &:hover {
+      box-shadow:
+        0 0 0 2px $project-gold,
+        0 14px 34px rgba(245, 197, 66, 0.4);
+    }
+  }
+
+  .project-card-award {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #2b2000;
+    background: linear-gradient(
+      135deg,
+      #fff1b8 0%,
+      $project-gold 45%,
+      $project-gold-deep 100%
+    );
+    border-radius: 999px;
+    padding: 4px 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+
+    // subtle shine sweeping across the badge
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -60%;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.7),
+        transparent
+      );
+      animation: project-award-shine 3.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes project-award-shine {
+  0%,
+  60% {
+    left: -60%;
+  }
+  100% {
+    left: 130%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card .project-card-media img {
+    transition: none;
+  }
+  .project-card .project-card-award::after {
+    animation: none;
+  }
+}
