@@ -10,12 +10,7 @@ const ProjectCard = ({
   awardIcon = '🏆',
 }) => (
   <div data-uk-scrollspy="cls: uk-animation-fade; delay: 200; repeat: true">
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      className={`project-card${award ? ' is-award' : ''}`}
-    >
+    <a href={url} target="_blank" rel="noreferrer" className="project-card">
       <div className="project-card-media">
         <img src={img} alt="" loading="lazy" />
       </div>

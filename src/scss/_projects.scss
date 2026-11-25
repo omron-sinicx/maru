@@ -1,5 +1,5 @@
 // "Projects powered by maru" cards: dark cards matching the header, with a
-// gold treatment for award-winning projects (template.yaml `award:`).
+// gold badge for award-winning projects (template.yaml `award:`).
 $project-card-bg: #1e2127;
 $project-card-fg: #e8e8e8;
 $project-card-muted: #a0a4ab;
@@ -100,19 +100,6 @@ $project-gold-deep: #c9971c;
     .project-card-media {
       flex: 0 0 34%;
       min-height: 200px;
-    }
-  }
-
-  // ---- award-winning project -------------------------------------------
-  &.is-award {
-    box-shadow:
-      0 0 0 2px $project-gold,
-      0 6px 22px rgba(245, 197, 66, 0.25);
-
-    &:hover {
-      box-shadow:
-        0 0 0 2px $project-gold,
-        0 14px 34px rgba(245, 197, 66, 0.4);
     }
   }
 
